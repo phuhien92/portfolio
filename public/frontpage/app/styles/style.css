@@ -1,0 +1,115 @@
+
+#logo {
+	background: url(images/global_sprite.png);
+	background-position: 0px 10px;
+	width: 20px;
+	height: 20px;
+}
+
+#logo-container h3 {
+	display: inline-block;
+	top: 16px;
+	position: relative;
+	cursor: pointer;
+}
+
+#logo-container img{
+	border: 3px solid rgba(28, 166, 243, 0.59);
+}
+
+strong {
+	color: red;
+}
+#header > ul > li > a {
+	color: white;
+}
+
+#header > ul>li> a:hover {
+	color: black;
+}
+
+#footer {
+	width: 700px;
+	text-align: center;
+}
+
+ul.nav {
+padding-top: 25px;
+}
+
+.header-container {
+position: absolute;
+background: none;
+display: block;
+width: 100%;
+padding-top: 10px;
+padding-bottom: 10px;
+z-index: 1;
+border-bottom: 1px solid #fff;
+}
+
+#header {
+	width: 800px;
+}
+
+#slider {
+	height: auto;
+	padding: 0px;
+}
+
+#myCarousel {
+	height: 100%;
+}
+
+.carousel-inner h2 {
+display: inline-block;
+}
+
+.carousel-caption {
+position: ;
+}
+
+.slider {
+background-size: cover !important;
+height: 800px;
+width: 100%;
+}
+
+#slider1 {
+    background: url(../images/slider-1.png) no-repeat;
+}
+
+#slider2 {
+	background: url(../images/slider-2.png) no-repeat;
+
+}
+
+#slider3 {
+		background: url(../images/slider-3.png) no-repeat;
+		background-color: rgb(84, 141, 127);
+}
+
+#slider3 .carousel-caption {
+	bottom: 7%;
+}
+
+#slider3 .carousel-caption > p {
+	font-size: large;
+}
+
+.carousel-indicators .active {
+border: 3px solid rgb(246, 12, 12);
+}
+
+.sub-intro {
+	width: 70%;
+	padding: 40px 50px;
+}
+
+.sub-intro h2 {
+	font-family: cursive;
+}
+
+.equipment, .the-lab {
+	margin: 20px;
+}
