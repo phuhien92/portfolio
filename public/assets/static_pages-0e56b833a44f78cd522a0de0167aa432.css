@@ -1,0 +1,128 @@
+/* line 4, /Users/hienluong/Documents/Aptana Studio 3 Workspace/anhhong/app/assets/stylesheets/static_pages.css.scss */
+#footer {
+  max-height: 50px;
+  line-height: 30px;
+  padding: 10px;
+  background: black;
+  color: white;
+}
+
+/* line 12, /Users/hienluong/Documents/Aptana Studio 3 Workspace/anhhong/app/assets/stylesheets/static_pages.css.scss */
+#home {
+  background-image: url(../assets/bg.png);
+}
+/* line 14, /Users/hienluong/Documents/Aptana Studio 3 Workspace/anhhong/app/assets/stylesheets/static_pages.css.scss */
+#home .avatar {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  position: relative;
+  cursor: default;
+  box-shadow: inset 0 0 0 0 rgba(200, 95, 66, 0.4), inset 0 0 0 16px rgba(255, 255, 255, 0.6), 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+/* line 24, /Users/hienluong/Documents/Aptana Studio 3 Workspace/anhhong/app/assets/stylesheets/static_pages.css.scss */
+#home .person {
+  background-image: url(../assets/avatar.png);
+  background-size: cover;
+}
+
+/* line 30, /Users/hienluong/Documents/Aptana Studio 3 Workspace/anhhong/app/assets/stylesheets/static_pages.css.scss */
+.parallax {
+  background-position: center top !important;
+  background-attachment: scroll !important;
+  height: 100vh;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* line 37, /Users/hienluong/Documents/Aptana Studio 3 Workspace/anhhong/app/assets/stylesheets/static_pages.css.scss */
+.info {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+/* line 43, /Users/hienluong/Documents/Aptana Studio 3 Workspace/anhhong/app/assets/stylesheets/static_pages.css.scss */
+.info > h1 {
+  font-size: 60px;
+  color: #FFFFFF;
+  font-family: Pacifico;
+}
+
+/* line 49, /Users/hienluong/Documents/Aptana Studio 3 Workspace/anhhong/app/assets/stylesheets/static_pages.css.scss */
+.parallax h1, .parallax h2, .parallax h2, .parallax p {
+  color: #FFFFFF;
+}
+
+/* line 53, /Users/hienluong/Documents/Aptana Studio 3 Workspace/anhhong/app/assets/stylesheets/static_pages.css.scss */
+.overlay-about {
+  padding: 80px 0;
+}
+
+/* line 56, /Users/hienluong/Documents/Aptana Studio 3 Workspace/anhhong/app/assets/stylesheets/static_pages.css.scss */
+.section-title {
+  margin-top: 20px;
+  text-align: left;
+  margin-bottom: 50px;
+}
+/* line 60, /Users/hienluong/Documents/Aptana Studio 3 Workspace/anhhong/app/assets/stylesheets/static_pages.css.scss */
+.section-title h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 3em;
+  letter-spacing: -5px;
+  line-height: 50px;
+}
+
+/* line 68, /Users/hienluong/Documents/Aptana Studio 3 Workspace/anhhong/app/assets/stylesheets/static_pages.css.scss */
+.parallax-overlay-4 {
+  background-color: #1672AB;
+  opacity: 1;
+}
+
+/* line 74, /Users/hienluong/Documents/Aptana Studio 3 Workspace/anhhong/app/assets/stylesheets/static_pages.css.scss */
+.parallax .container {
+  padding: 100px 20px;
+}
+
+/* line 79, /Users/hienluong/Documents/Aptana Studio 3 Workspace/anhhong/app/assets/stylesheets/static_pages.css.scss */
+.border-white {
+  color: #FFF;
+}
+
+/* line 83, /Users/hienluong/Documents/Aptana Studio 3 Workspace/anhhong/app/assets/stylesheets/static_pages.css.scss */
+#contact {
+  background: url(../assets/bg-3.png) no-repeat center center;
+  background-size: cover;
+}
+
+/* line 88, /Users/hienluong/Documents/Aptana Studio 3 Workspace/anhhong/app/assets/stylesheets/static_pages.css.scss */
+.parallax-overlay {
+  background: #000000;
+  opacity: 0.8;
+  height: 100%;
+  display: table;
+  width: 100%;
+}
+/* line 94, /Users/hienluong/Documents/Aptana Studio 3 Workspace/anhhong/app/assets/stylesheets/static_pages.css.scss */
+.parallax-overlay .container {
+  vertical-align: middle;
+  display: table-cell;
+}
+
+/* line 99, /Users/hienluong/Documents/Aptana Studio 3 Workspace/anhhong/app/assets/stylesheets/static_pages.css.scss */
+.fa-blue {
+  background: blue;
+}
+
+/* line 102, /Users/hienluong/Documents/Aptana Studio 3 Workspace/anhhong/app/assets/stylesheets/static_pages.css.scss */
+.fa-circle-bg {
+  border-radius: 1em;
+}
+
+/* line 106, /Users/hienluong/Documents/Aptana Studio 3 Workspace/anhhong/app/assets/stylesheets/static_pages.css.scss */
+.medium {
+  padding: 1em;
+  width: 30px;
+  height: 30px;
+}
