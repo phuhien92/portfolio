@@ -1,6 +1,52 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.nav-sticky {
+  position:fixed;
+  width:100%;
+  z-index: 1;
+  background-color: rgba(245, 245, 245, 0.8);
+  ul#mobile-nav {
+    display:none;
+    padding: 10px;
+    margin: 0px;
+    height: 70px;
+    background-color: #FFF;
+    .logo {
+      float: left;
+      img {
+        width: 45px;
+      }
+    }
+    .menu-icon {
+      float:right;
+    }
+  }
+  ul {
+    text-align:center;
+    margin-top: 15px;
+    li {
+      display: inline-block;
+      cursor: pointer;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 1.5em;
+      margin: 0px 15px;
+      font-family: monospace;
+      a {
+        color: #999999;
+        transition: all 0.3s;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      }
+      a:hover {
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
+}
 #footer {
   max-height: 50px;
   line-height: 30px;
@@ -10,7 +56,13 @@
 }
 
 #home {
-  background-image: asset-data-url("bg.png");
+  // background-image: asset-data-url("bg.png");
+  background-image: asset-data-url("bg_header.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  background-position-y: 160px !important;
+  padding-top: 84px;
   .avatar {
     width: 170px;
     height: 170px;
@@ -29,7 +81,6 @@
 
   .parallax {
     background-position: center top !important;
-    background-attachment: scroll !important;
     height: 100vh;
     margin: 0 auto;
     width: 100%;
@@ -53,6 +104,28 @@ margin-bottom: 70px;
 .overlay-about {
   padding: 80px 0;
 }
+#work-process {
+   text-align: center;
+
+  .parallax-overlay-4 {
+      padding: 40px 0px;
+  }
+  h4,h3 {
+    color: white;
+    text-transform: capitalize;
+  }
+  .section-title  {
+    line-height: 0px;
+    margin: 30px 0px 40px 0px;
+    text-align: center;
+
+  }
+  a#resume_btn {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+  }
+}
 .section-title {
     margin-top: 20px;
     text-align: left;
@@ -72,7 +145,7 @@ margin-bottom: 70px;
 
 .parallax {
   .container {
-    padding: 100px 20px;
+    // padding: 10% 0px;
   }
 }
 
@@ -108,4 +181,24 @@ margin-bottom: 70px;
   padding: 1em;
   width:30px;
   height: 30px;
+}
+#about {
+  background-color: #FFF;
+}
+.info {
+  h1 {
+    color: black;
+  }
+  h2 {
+    color: #999999;
+  }
+}
+
+@media (max-width: 736px) {
+  #mobile-nav {
+    display:block !important;
+  }
+  .top-bar-section {
+    display:none;
+  }
 }
