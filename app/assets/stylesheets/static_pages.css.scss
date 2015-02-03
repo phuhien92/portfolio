@@ -146,6 +146,7 @@ a.bcf-logo {
   background-repeat: no-repeat;
   background-position-y: 160px !important;
   padding-top: 84px;
+  max-height: 500px;
   .avatar {
     width: 170px;
     height: 170px;
@@ -185,7 +186,7 @@ margin-bottom: 70px;
 }
 
 .overlay-about {
-  padding: 80px 0;
+  padding: 40px 0;
 }
 #work-process {
    text-align: center;
@@ -314,6 +315,93 @@ text-align: center;
 #contact .parallax-overlay .container {
   display: block;
 }
+#mobile-menu{
+    cursor: pointer;
+}
+div#mobile-menu-screen {
+  display:none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+
+  div#mobile-modal {
+    height: 100%;
+    width: 290px;
+    background: #F4F1F1;
+    float: right;
+    background-image: url(../images/bg-logo1.png);
+    background-repeat: no-repeat;
+    background-position: -99px 270px;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition:all 0.5s;
+    -ms-transition: all 0.5s;
+    ul {
+      list-style: none;
+      li#mobile_close_btn {
+        width: 60px;
+        cursor: pointer;
+      }
+      li {
+        padding: 15px 0px;
+
+        i {
+          width: 30px;
+        }
+        a {
+        text-decoration: none;
+        font-size: 2em;
+        text-transform: uppercase;
+        font-weight: bold;
+        }
+      }
+    }
+  }
+}
+.menu-mobile-on {
+  height: 100vh;
+  overflow: hidden;
+}
+.move-to-left {
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+}
+
+@keyframes move-to-left {
+  from {}
+  to {transform: translateX(0%);}
+}
+@-webkit-keyframes move-to-left {
+  from {}
+  to {-webkit-transform: translateX(0%);}
+}
+@-moz-keyframes move-to-left {
+  from {}
+  to {-moz-transform: translateX(0%);}
+}
+
+.move-to-right {
+  transform: translateX(0%);
+  -webkit-transform: translateX(0%);
+  -moz-transform: translateX(0%);
+}
+
+@keyframes move-to-right {
+  from {}
+  to {transform: translateX(100%);}
+}
+@-webkit-keyframes move-to-right {
+  from {}
+  to {-webkit-transform: translateX(100%);}
+}
+@-moz-keyframes move-to-right {
+  from {}
+  to {-moz-transform: translateX(100%);}
+}
+
 @media (max-width: 736px) {
   #mobile-nav {
     display:block !important;
