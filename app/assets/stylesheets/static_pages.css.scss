@@ -1,6 +1,14 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
 img[src^="http://bettercontactform.com/contact/userlog.php"] {
   display: none;
 }
@@ -86,7 +94,7 @@ a.bcf-logo {
 .nav-sticky {
   position:fixed;
   width:100%;
-  z-index: 1;
+  z-index: 12;
   background-color: rgba(245, 245, 245, 0.8);
   ul#mobile-nav {
     display:none;
@@ -299,6 +307,48 @@ margin-bottom: 70px;
 }
 #about {
   background-color: #FFF;
+  .expertise-list {
+
+    ul {
+      list-style: none;
+      padding: 0px;
+      li {
+        display:inline-block;
+        width: calc(95%/4);
+        min-width: 165px;
+        padding: 10px;
+        .item {
+          i {
+            width: 100%;
+            height: 150px;
+            display:block;
+            margin: auto;
+            background-size: contain;
+          }
+          .item-title {
+            text-align: center;
+            font-family: "Roboto-Bold",Georgia,Times,serif;
+            text-transform: uppercase;
+            vertical-align: middle;
+            font-weight: bold;
+            font-size: 15px;
+          }
+        }
+      }
+      i.ruby-skill {
+        background: url(../images/rails.png) center center no-repeat;
+      }
+      i.html-skill {
+        background: url(../images/html.png)center center  no-repeat;
+      }
+      i.css-skill {
+        background: url(../images/css.png) center center no-repeat;
+      }
+      i.js-skill {
+        background: url(../images/js.png) center center no-repeat;
+      }
+    }
+  }
 }
 .info {
   h1 {
@@ -403,7 +453,170 @@ div#mobile-menu-screen {
   from {}
   to {-moz-transform: translateX(100%);}
 }
+.welcome-page__bottom-line {
+  text-align: center;
+  border: 5px solid rgb(22, 114, 171);
+  position: relative;
+  z-index: 1;
+  i {
+  position: absolute;
+  top: -31px;
+  padding: 10px;
+  background: rgb(22, 114, 171);
+  color: white;
+  transition: all 0.3s;
+  border-radius: 50%;
+    &::after {
+      border-radius: 50%;
+      background: #57ABDF;
+      content: " ";
+      height: 15px;
+      width: 15px;
+      top: -24px;
+      display: block;
+      position: absolute;
+    }
+  }
+}
+#adaptive-device {
+  background: #959595;
+  @include vendor-prefix(background,linear-gradient(#f57532 17%, rgba(255, 232, 115, 0.49) 107%));
+  .main {
+    padding: 10px 0px;
+    .title {
+      padding: 20px 0px;
+      text-align: center;
+      color: white;
+      h1 {
+        color: white;
+        font-weight: bold;
+      }
+      span {
+        font-weight: bold;
+        padding-bottom: 10px;
 
+      }
+    }
+    .devices {
+      ul {
+        display: table;
+        list-style: none;
+        margin: auto;
+        padding:0px;
+        li {
+          padding-left: 10px;
+          padding-right: 10px;
+          text-align: center;
+          min-height: 360px;
+          display: table-cell;
+          vertical-align: bottom;
+          .devices__item-relative, .devices__name {
+            position: relative;
+            display: block;
+            color: white;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+.devices__image:hover {
+-webkit-transform: translateY(-10px) translateZ(0);
+transform: translateY(-10px) translateZ(0);
+}
+
+.devices__image:hover+.devices__shadow {
+opacity: .7;
+-webkit-transform: scale(.9) translateZ(0);
+transform: scale(.9) translateZ(0);
+}
+
+.devices__shadow {
+display: block;
+margin: 0 auto;
+-webkit-transition: all .2s linear;
+transition: all .2s linear;
+-webkit-transform: translateZ(0);
+transform: translateZ(0);
+position: relative;
+z-index: 1;
+}
+
+.devices__image_book {
+width: 257px;
+height: 148px;
+background: url(../images/device-book.png) 0 0 no-repeat;
+}
+.devices__shadow_book {
+margin-top: -4px;
+width: 276px;
+height: 19px;
+background: url(../images/device-book_shadow.png) 0 0 no-repeat;
+}
+.devices__image_pc {
+width: 361px;
+height: 277px;
+background: url(../images/device-pc.png) 0 0 no-repeat;
+}
+.devices__shadow_pc {
+margin-top: -5px;
+width: 296px;
+height: 20px;
+background: url(../images/device-pc_shadow.png) 0 0 no-repeat;
+}
+.devices__image_tab {
+height: 111px;
+width: 75px;
+background: url(../images/device-tab.png) 0 0 no-repeat;
+}
+.devices__shadow_tab {
+margin-top: -2px;
+width: 137px;
+height: 11px;
+background: url(../images/device-tab_shadow.png) 0 0 no-repeat;
+}
+.devices__image_phone {
+width: 40px;
+height: 75px;
+background: url(../images/device-phone.png) 0 0 no-repeat;
+}
+.devices__shadow_phone {
+margin-top: -1px;
+width: 56px;
+height: 7px;
+background: url(../images/device-phone_shadow.png) 0 0 no-repeat;
+}
+.devices__image {
+-webkit-transition: all .2s linear;
+transition: all .2s linear;
+-webkit-transform: translateZ(0);
+transform: translateZ(0);
+vertical-align: bottom;
+position: relative;
+z-index: 2;
+display: block;
+margin: auto;
+}
+.delay-1 {
+  @include vendor-prefix(animation-delay, 300ms);
+}
+.delay-2 {
+  @include vendor-prefix(animation-delay, 600ms);
+}
+.delay-3 {
+  @include vendor-prefix(animation-delay, 900ms);
+}
+
+/*Media query*/
+@media screen and (max-width: 920px) {
+.devices__image_book {
+width: 129px;
+height: 74px;
+background: url(../images/device-book.png) 0 0 no-repeat;
+background-size: cover;
+}
+}
 @media (max-width: 736px) {
   #mobile-nav {
     display:block !important;
@@ -413,7 +626,19 @@ div#mobile-menu-screen {
   }
 }
 
-
+@media screen and (max-width: 650px) {
+  .devices__name {
+    font-size: 12px;
+    position: absolute;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    top: 100%;
+    left: 50%;
+    width: 70px;
+    margin: 26px 0 0px -35px;   
+  }
+}
 @media (orientation: landscape) {
   .info {
     margin-top: 20px;
