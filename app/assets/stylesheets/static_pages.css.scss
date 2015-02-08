@@ -704,7 +704,7 @@ div#mobile-menu-screen {
     width: 100%;
     margin: 0px;
     .work-item {
-      // height: 530px;
+      max-height: 410px;
       width: 100%;
       display: inline-block;
       padding: 0px;
@@ -712,6 +712,7 @@ div#mobile-menu-screen {
       margin-top: -4px;
       cursor: pointer;
       position:relative;
+      @include vendor-prefix(transition, all 1s ease);
       .container {
         padding-top: 50px;
         .row {
@@ -776,6 +777,123 @@ div#mobile-menu-screen {
     }
   }
 } 
+.short-description {
+  padding: 20px;
+  background: rgb(39, 36, 36);
+  margin-bottom: 20px;
+  display: flex;
+  .description {
+    position:relative;
+    width: 60%;
+    display: inline-block;
+    p {
+      color: white;
+      margin-right: 10px;
+    }
+    .skill-involved {
+      margin-top: 20px;
+      ul {
+        list-style: none;
+        min-height: 30px;
+        display: flex;
+        li {
+          display: inline-block;
+          position:relative;
+
+          i {
+            width: 41px;
+            height: 43px;
+            background: url(../images/service-icons.png) no-repeat;
+            display: inline-block;
+          }
+          i.icon-css3 {
+            background-position: -41px 0;
+          }
+          i.icon-js {
+            background-position: -123px 0;
+          }
+          i.icon-responsive-design {
+            background-position: -205px 0;
+          }
+          i.icon-psd {
+            background-position: -82px 0;
+          }
+          i.icon-ruby {
+            background-position: -164px 0;
+          }
+        }
+        li:hover::after {
+          content: attr(data-content);
+          height: 25px;
+          min-width: 60px;
+          padding: 4px;
+          position:absolute;
+          bottom: -10px;
+          background: #FFF;
+          border-bottom-left-radius: 5px;
+          border-bottom-right-radius: 5px;
+          border-top-right-radius: 5px;
+          bottom: -30px;
+          left: 14px;
+          text-align: center;
+        }
+        li[data-content="Ruby on Rails"]:hover::after,li[data-content="PSD to HTML"]:hover::after {
+          width: 100px;
+        }
+        li[data-content="Responsive Web Design"]:hover::after {
+          width: 180px;
+        }
+        li:hover::before {
+          content: "\f0d8";
+          font-family: fontAweSome;
+          font-size: 1.5em;
+          color: #FFF;
+          position: absolute;
+          bottom: -11px;
+          left: 15px;
+        }
+      }
+    }
+    .skill-involved:before {
+      position: absolute;
+      width: 100%;
+      left: 0;
+      height: 1px;
+      content: "";
+      margin-top: -10px;
+      background: #FFF;
+    }
+  }
+  .real-demo {
+    width: 37%;
+    max-width: 344px;
+    margin-left: 20px;
+    height: 100%;
+    display: inline-block;
+    img {
+      width: 100%;
+    }
+  }
+}
+.work-list ul .work-item.open {
+  max-height: 3000px !important;
+}
+a#web-project {
+  border-radius: 3em;
+  min-width: 85px;
+  height: 40px;
+  border: 2px solid #FFF; 
+  color: #FFF;
+  padding: 5px;
+  text-align: center;
+  line-height: 25px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.short-description .container {
+  padding-top: 20px !important;
+  display: flex;
+}
 @media screen and (max-width: 768px) { 
   #about .expertise-list ul li {
     width: calc(98%/2);
@@ -815,8 +933,24 @@ div#mobile-menu-screen {
       font-size: 1.2em !important;
     }
   }
-
+  .short-description .container {
+    @include vendor-prefix(flex-direction, column-reverse);
+    .description {
+      width: 100%;
+      order: 2;
+    }
+    .real-demo {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 25px;
+      order: 1;
+    } 
+  }
 }
+@media screen and (max-width: 480px) {
+  
+}  
+
 @media screen and (max-width: 375px) {  
   #about .expertise-list ul li {
     width: 100%;
@@ -833,8 +967,12 @@ div#mobile-menu-screen {
     width: 100px;
     height: 75px;
   }
+  .short-description .description .skill-involved ul {
+    display: block;
+  }
 
 }
+
 @media screen and (max-height: 319px) {
   #mobile-menu-screen #mobile-modal {
     overflow: scroll !important;
