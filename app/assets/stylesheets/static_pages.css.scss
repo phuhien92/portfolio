@@ -222,9 +222,11 @@ h4,h3 {
 }
 a#resume_btn {
   color: white;
-    // font-size: 30px;
-    text-decoration: none;
-  }
+  text-decoration: none;
+  border: 4px solid #FFF;
+  border-radius: 3em;
+  padding: 0px 10px;
+}
 }
 .section-title {
   margin-top: 20px;
@@ -361,7 +363,7 @@ a#resume_btn {
     color: black;
   }
   h2 {
-    color: #999999;
+    color: #3A3C3D;
   }
 }
 
@@ -644,7 +646,9 @@ div#mobile-menu-screen {
   }
 }
 @media screen and (max-width: 650px) {
-
+  #home {
+    background: #EFEFEF !important; 
+  }
 }
 @media screen and (orientation:landscape) {
   .info {
@@ -720,6 +724,9 @@ div#mobile-menu-screen {
             text-align: center;
             color: #FFF;
           }
+          h1 {
+            text-transform: uppercase;
+          }
           em {
             font-size: 2em;
             text-transform: capitalize;
@@ -770,7 +777,7 @@ div#mobile-menu-screen {
       background: #243656;
     }
     li#work-2 {
-
+      background:#f29400;
     }
     li#work-3 {
 
@@ -906,6 +913,11 @@ a#web-project {
       font-size: 1.5em !important;
     }
   }
+  ul.work-list-done {
+    .work-item {
+      max-height: 300px;
+    }
+  }
 
 }
 @media screen and (max-width: 650px) {  
@@ -948,7 +960,7 @@ a#web-project {
   }
 }
 @media screen and (max-width: 480px) {
-  
+
 }  
 
 @media screen and (max-width: 375px) {  
@@ -970,7 +982,11 @@ a#web-project {
   .short-description .description .skill-involved ul {
     display: block;
   }
-
+  ul.work-list-done {
+    .work-item {
+      max-height: 280px;
+    }
+  }
 }
 
 @media screen and (max-height: 319px) {
