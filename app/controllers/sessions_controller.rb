@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   def new
+    
   end
   
   def create
@@ -8,7 +9,7 @@ class SessionsController < ApplicationController
     respond_to do |format|
       if user && user.authenticate(params[:session][:password])
         log_in user
-        format.html {redirect_to(:back, :notice => "Logged in successfully")}
+        format.html {redirect_to(rsvp_path, :notice => "Logged in successfully")}
         format.js {render action: "create"}
       else
         format.js {render action: "error"}

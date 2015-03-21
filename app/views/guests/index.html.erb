@@ -1,0 +1,39 @@
+<% if logged_in? %>
+<div class="container">
+	<h1>Guest List</h1>
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Email</th>
+				<th>Phone</th>
+				<th>Confirm</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @guests.each do |guest| %>
+			<tr>
+				<td><%= guest.name %></td>
+				<td><%= guest.email %></td>
+				<td><%= guest.phone %></td>
+				<td><%= guest.confirm %></td>
+			</tr>
+			<% end %>
+		</tbody>
+	</table>
+
+	<div>
+		Total Accepts: <%= Guest.where(:confirm => 't').count  %>
+	</div>
+	<div>
+		Total Regrets: <%= Guest.where(:confirm => 'f').count  %>
+	</div>
+</div>
+<% else %>
+<div class="container">
+	<div class="center-block">
+		<h1>Sorry, you are not authorized to view this page. Make sure to log in before entering here!</h1>
+	</div>
+	<%= link_to "Sign In", sessions_new_path, class: "btn btn-primary" %>
+</div>
+<% end %>

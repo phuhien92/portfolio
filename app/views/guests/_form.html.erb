@@ -1,0 +1,41 @@
+<%= form_for(@guest) do |f| %>
+<% if @guest.errors.any? %>
+<div id="error_explanation">
+	<h2><%= pluralize(@guest.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+	<ul>
+		<% @guest.errors.full_messages.each do |message| %>
+		<li>
+			<%= message %>
+		</li>
+		<% end %>
+	</ul>
+</div>
+<% end %>
+
+<div class="form-group">
+	<%= f.label :name %> *(require)
+	<br>
+	<%= f.text_field :name, class: "form-control" %>
+</div>
+<div class="form-group">
+	<%= f.label :email %>
+	<br>
+	<%= f.text_field :email, class: "form-control" %>
+</div>
+<div class="form-group">
+	<%= f.label :phone %>
+	<br>
+	<%= f.text_field :phone, class: "form-control" %>
+</div>
+<div class="form-group">
+	<%= f.label :rsvp %> *(require)
+	<br>
+	<%= f.select :confirm, [['Accepts', true], ['Regrets', false]], class: "form-control" %>
+</div>
+<div class="comments"></div>
+<div class="errors"></div>
+<div class="actions">
+	<%= f.submit "RSVP", :class => "submit-btn btn btn-primary", remote: true, :method => "POST" %>
+</div>
+<% end %>
