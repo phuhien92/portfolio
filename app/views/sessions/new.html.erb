@@ -2,9 +2,10 @@
 	<% flash.each do |key, value| %>
         <div class="alert bg-<%= key %>"><%= value %></div>
       <% end %>
-	<h1 class="center-block">Log in</h1>
-	<div class="row">
+	<div class="row center-block signup-form">
 		<div class="col-md-6 col-md-offset-3">
+				<h1 class="center-block">Log in</h1>
+
 			<%= form_for(:session, url: sessions_path) do |f| %>
 
 			<%= f.label :username %>
@@ -13,7 +14,7 @@
 			<%= f.label :password %>
 			<%= f.password_field :password %>
 	      </br></br>
-			<%= f.submit "Log in", class: "btn btn-primary" %>
+			<%= f.submit "Log in", class: "btn btn-primary btn-sm" %>
 			<% end %>
 
 			<p>

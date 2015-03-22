@@ -3,6 +3,9 @@ Rails.application.routes.draw do
   get 'about' => 'static_pages#about'
   get 'signup' => 'users#new'
   get 'rsvp'  => 'static_pages#rsvp'
+  get    'login'   => 'sessions#new'
+  post   'login'   => 'sessions#create'
+  delete 'logout'  => 'sessions#destroy'
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :guests, only: [:new, :create,:show, :index, :edit]

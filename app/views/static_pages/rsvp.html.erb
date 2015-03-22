@@ -5,6 +5,37 @@
 	</div>
 	<% end %>
 </div>
-<div class="container-fluid">
-	<div>Cool thing is comming soon</div>
+<div id="rsvp" class="container-fluid">
+	<%= render('header') %>
+	<div class="row">
+		<div id="rsvp_box">
+			<div class="slider-container">
+				<div id="weddingSlider" class="carousel slide" data-interval="3000" data-ride="carousel">
+					<!-- Carousel indicators -->
+					<div class="header_title">
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+						</ol>
+					</div>
+					<!-- Carousel items -->
+					<div class="carousel-inner">
+						<div class="active item">
+							<img src="https://dl-web.dropbox.com/get/carousel/far.jpg?_subject_uid=147439359&w=AAD2RbSOfK4FgotXPevffuiK4jwgKLDKJTJG4FJnRlfIJw" />
+						</div>
+						<div class="item">
+							<img src="https://dl-web.dropbox.com/get/carousel/far1.jpg?_subject_uid=147439359&w=AACU3lpCXDSyHsltTkl1Kq1Jca-0hvhm4VMwHOw3hXDrIg" />
+						</div>
+						<div class="item">
+							<img src="https://dl-web.dropbox.com/get/carousel/far1.jpg?_subject_uid=147439359&w=AACU3lpCXDSyHsltTkl1Kq1Jca-0hvhm4VMwHOw3hXDrIg" />
+						</div>
+					</div>
+					<!-- Carousel nav -->
+					<a class="carousel-control left" href="#weddingSlider" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left hidden"></span> </a>
+					<a class="carousel-control right" href="#weddingSlider" data-slide="next"> <span class="glyphicon glyphicon-chevron-right hidden"></span> </a>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>

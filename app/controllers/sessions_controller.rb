@@ -20,5 +20,8 @@ class SessionsController < ApplicationController
     end
   end
   
-  
+  def destroy
+    log_out
+    redirect_to rsvp_path
+  end
 end
