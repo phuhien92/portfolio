@@ -901,6 +901,26 @@ a#web-project {
   padding-top: 20px !important;
   display: flex;
 }
+#signed_in {
+  display: table;
+  .user_logged_in {
+    display: table-cell;
+    position: absolute;
+    padding: 5px 10px;
+    background: #FFF;
+    border: 1px solid #000;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.66);
+    right: 10px;
+    top: 10px;
+    color: rgb(22, 125, 199);
+    z-index: 10;
+  }
+}
+#rsvp {
+  .row {
+      background: url(../assets/bg_body.jpg);
+  }
+}
 @media screen and (max-width: 768px) { 
   #about .expertise-list ul li {
     width: calc(98%/2);
@@ -992,25 +1012,5 @@ a#web-project {
 @media screen and (max-height: 319px) {
   #mobile-menu-screen #mobile-modal {
     overflow: scroll !important;
-  }
-}
-div#signed_in {
-  display: table;
-  .user_logged_in {
-    display: table-cell;
-    position: absolute;
-    padding: 5px 10px;
-    background: #FFF;
-    border: 1px solid #000;
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.66);
-    right: 10px;
-    top: 10px;
-    color: rgb(22, 125, 199);
-    z-index: 10;
-  }
-}
-#rsvp {
-  .row {
-      background: url(../assets/bg_body.jpg);
   }
 }
